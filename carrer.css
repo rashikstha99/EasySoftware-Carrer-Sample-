@@ -1,27 +1,23 @@
 body{
     font-family: 'Montserrat', sans-serif;
+    width: 95%;
+    margin: 0 auto;
 }
 
 h2{
-    margin-left: 2rem;
     margin-bottom: 1.5rem;
-    color: #e91a33;
+    color: #000;
+    font-weight: bold;
 }
 
 h4{
-    margin-left: 2rem;
+    margin-bottom: 0;
+    margin-top: 2rem;
 }
 
-.card-group .card img{
-    width: 100%;
-    height: 60%;
-}
-
-.card-group .card{
-    border: 0;
-    margin-right: 2rem;
-    margin-left: 2rem;
-    box-shadow: 2px 2px 2px 2px lightgray;
+img{
+    padding-bottom: 2rem;
+    width: 70px;
 }
 
 .job{
@@ -32,22 +28,111 @@ h4{
     margin-bottom: 4rem;
 }
 
-.card-group .card .card-body p{
-    color: #101b9a;
-    font-family: 'Montserrat', sans-serif;
+.card-group>.card:first-child {
+    border-top-right-radius: .5rem !important;
+    border-bottom-right-radius: .5rem !important;
+}
+
+.card-group>.card:not(:first-child):not(:last-child):not(:only-child) {
+    border-radius: .5rem !important;
+}
+
+.card-group>.card:last-child {
+    border-top-left-radius: .5rem !important;
+    border-bottom-left-radius: .5rem !important;
+}
+
+.card-group .card{
+    margin: 0 1rem 0 0;
+    border-radius: .5rem;
+    border: 0;
+    position: relative;
+    transition: all 0.4s ease-in;
+    box-shadow: 1rem 1rem 1rem lightgray;
+}
+
+.card-group .card img{
+    padding: 0;
+    width: 100%;
+    height: 20rem ;
+    margin: 0 auto;
+    border-top-left-radius: .5rem !important;
+    border-top-right-radius: .5rem !important;
+}
+
+.card-group .card:hover img{
+    opacity: 0.5;
 }
 
 .card-group .card .card-body{
     transition: all 0.4s ease-in;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 
-.card-group .card .card-body:hover{
+.card-group .card:hover .card-body{
     background-color: #e91a33;
     color: #fff;
     border: lightgray;
 }
 
-@media (max-width: 992px) { 
+.card-group .card .card-body p{
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-group .card .card-body p i{
+    color: #101b9a;
+}
+
+.card-group .card:hover .card-body p{
+    color: #fff;
+}
+
+.card-group .card:hover .card-body p i{
+    color: #fff;
+}
+
+.card-group .card button{
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    background: #fff;
+    border-radius: 9px;
+    border: none;
+    z-index: -1;
+}
+
+.card-group .card:hover button{
+    z-index: 1;
+}
+
+.card-group .card button:hover{
+    background: linear-gradient(0.47deg, #101b9a 0.29%, #e91a33 62.1%);
+}
+
+.card-group .card button p{
+    padding: 12px 1rem;
+    font-size: 14px;
+    background: -webkit-linear-gradient(0.47deg, #101b9a 0.29%, #e91a33 62.1%); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card-group .card button:hover p{
+    background: linear-gradient(#fff, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.card-group .card button p i{
+    padding-left: 0.5rem;
+}
+
+@media (max-width:1200px) {
     h2{
         font-size: 1.5rem;
     }
@@ -63,23 +148,86 @@ h4{
     p{
         font-size: 0.75rem;
     }
+
+    .card-group .card{
+        height: 25rem;
+    }
+
+    .card-group .card img{
+        height: 15rem;
+    }
+
+    .card-group .card button {
+        left: 25%;
+    }
+}
+
+@media (max-width: 992px) { 
+    .card-group .card{
+        height: 20rem;
+    }
+
+    .card-group .card img{
+        height: 11rem;
+    }
+
+    .card-group .card button {
+        left: 22%;
+        top: 23%;
+    }
+
+    .card-group .card button p {
+        font-size: 10px;
+    }
 }
 
 @media (max-width: 768px) { 
-.card-group{
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        margin: 1rem 2rem;
+    h2{
+        text-align: center;
     }
 
-.card-group .card{
-        width: 100%;
-        margin: 1.5rem 0;
-    }
+    .card-group{
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            margin: 0 auto;
+        }
 
-.card-group .card img{
-        width: 100%;
-    }
+    .card-group .card{
+            width: 100%;
+            margin: 1.5rem 0;
+        }
+
+    .card-group .card img{
+            width: 100%;
+        }
+
+    .card-group .card button {
+            left: 30%;
+        }
  }
+
+@media (max-width: 576px) {
+    h2{
+        font-size: 1.25rem;
+    }
+
+    h4{
+        font-size: 1rem;
+    }
+
+    h5{
+        font-size: 0.75rem;
+    }
+
+    p{
+        font-size: 0.75rem;
+    }
+    
+    .card-group .card button {
+        left: 22%;
+    }
+
+
+}
 
