@@ -1,0 +1,85 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2{
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+    color: #e91a33;
+}
+
+h4{
+    margin-left: 2rem;
+}
+
+.card-group .card img{
+    width: 100%;
+    height: 60%;
+}
+
+.card-group .card{
+    border: 0;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    box-shadow: 2px 2px 2px 2px lightgray;
+}
+
+.job{
+    margin-bottom: 4rem;
+}
+
+.internship{
+    margin-bottom: 4rem;
+}
+
+.card-group .card .card-body p{
+    color: #101b9a;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-group .card .card-body{
+    transition: all 0.4s ease-in;
+}
+
+.card-group .card .card-body:hover{
+    background-color: #e91a33;
+    color: #fff;
+    border: lightgray;
+}
+
+@media (max-width: 992px) { 
+    h2{
+        font-size: 1.5rem;
+    }
+
+    h4{
+        font-size: 1.25rem;
+    }
+
+    h5{
+        font-size: 1rem;
+    }
+
+    p{
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 768px) { 
+.card-group{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: 1rem 2rem;
+    }
+
+.card-group .card{
+        width: 100%;
+        margin: 1.5rem 0;
+    }
+
+.card-group .card img{
+        width: 100%;
+    }
+ }
+
